@@ -1,0 +1,75 @@
+* {
+	--inner-border: 1px solid grey;
+	--inner-border-radius: 5px;
+}
+
+.card {
+	display: inline-grid;
+	width: 200px;
+	height: 300px;
+	grid-template-areas:
+	"combo name weapon"
+	"image image image"
+	"attack attack attack"
+	"effect effect effect"
+	"information information information";
+	padding: 5px;
+	background-color: beige;
+	border: 1px solid grey;
+	border-radius: 5px;
+	margin: 5px;
+}
+
+.card-name {
+	grid-area: name;
+	border-top: var(--inner-border);
+}
+
+.card-combo {
+	grid-area: combo;
+	border-left: var(--inner-border);
+	border-top: var(--inner-border);
+	border-top-left-radius: var(--inner-border-radius);
+}
+
+.card-weapon {
+	grid-area: weapon;
+	border-right: var(--inner-border);
+	border-top: var(--inner-border);
+	border-top-right-radius: var(--inner-border-radius);
+}
+
+.card-image {
+	grid-area: image;
+	border-left: var(--inner-border);
+	border-right: var(--inner-border);
+	border-top: var(--inner-border);
+	border-bottom: var(--inner-border);
+}
+
+.card-attacks {
+	grid-area: attack;
+	border-left: var(--inner-border);
+	border-right: var(--inner-border);
+	height: 0px;
+	overflow: visible;
+	line-height: 0;
+}
+
+.card-effects {
+	grid-area: effect;
+	border-left: var(--inner-border);
+	border-right: var(--inner-border);
+	border-top: var(--inner-border);
+	border-bottom: var(--inner-border);
+}
+
+.card-information {
+	grid-area: information;
+	border-left: var(--inner-border);
+	border-bottom: var(--inner-border);
+	border-right: var(--inner-border);
+	border-bottom-right-radius: var(--inner-border-radius);
+	border-bottom-left-radius: var(--inner-border-radius);
+	text-align: right;
+}
